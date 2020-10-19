@@ -1,3 +1,4 @@
+import 'package:fitnrun/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,10 +14,17 @@ class Pageone extends StatelessWidget {
                 fit: BoxFit.cover)),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) {
+              return Loginpage();
+            }),
+          );
+        },
         backgroundColor: Colors.blue,
         label: Text(
-          'Get started',
+          'GET STARTED',
           style: GoogleFonts.bebasNeue(fontSize: 28),
           textAlign: TextAlign.center,
         ),
