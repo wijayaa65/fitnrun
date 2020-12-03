@@ -1,9 +1,8 @@
-import 'package:fitnrun/register.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/cupertino.dart';
 
-class Loginpage extends StatelessWidget {
+class Registerpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,10 +18,10 @@ class Loginpage extends StatelessWidget {
             children: [
               Container(
                 child: Text(
-                  'LOGIN',
+                  'REGISTER',
                   style: GoogleFonts.bebasNeue(fontSize: 64),
                 ),
-                margin: EdgeInsets.fromLTRB(24, 313, 274, 0),
+                margin: EdgeInsets.fromLTRB(24, 313, 0, 0),
                 alignment: Alignment.centerLeft,
               ),
               Container(
@@ -34,7 +33,7 @@ class Loginpage extends StatelessWidget {
                       child: TextField(
                         decoration: InputDecoration(
                             hintText: AutofillHints.email,
-                            labelText: 'EMAIL',
+                            labelText: 'Email',
                             border: OutlineInputBorder(),
                             counterStyle: GoogleFonts.bebasNeue()),
                       ),
@@ -47,30 +46,19 @@ class Loginpage extends StatelessWidget {
                             labelText: 'Password',
                             border: OutlineInputBorder(),
                             counterStyle: GoogleFonts.bebasNeue()),
-                        obscureText: true,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: TextField(
+                        decoration: InputDecoration(
+                            hintText: AutofillHints.password,
+                            labelText: 'Re-Password',
+                            border: OutlineInputBorder(),
+                            counterStyle: GoogleFonts.bebasNeue()),
                       ),
                     ),
                   ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.only(left: 12),
-                alignment: Alignment.centerLeft,
-                child: FlatButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return Registerpage();
-                      }),
-                    );
-                  },
-                  child: Text('Don’t have account yet? Here',
-                      style: GoogleFonts.roboto(
-                        fontSize: 11,
-                      )),
-                  textColor: Colors.black,
-                  visualDensity: VisualDensity.adaptivePlatformDensity,
                 ),
               ),
               Container(
@@ -98,11 +86,11 @@ class Loginpage extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 220, top: 72),
+                margin: EdgeInsets.only(left: 220, top: 40),
                 child: RaisedButton(
                   onPressed: () {},
                   child: Text(
-                    'LOGIN',
+                    'Next',
                     style: GoogleFonts.bebasNeue(fontSize: 28),
                     textAlign: TextAlign.center,
                   ),
